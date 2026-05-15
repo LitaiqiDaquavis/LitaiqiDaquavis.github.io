@@ -18,55 +18,57 @@
 
     .section {
       position: relative;
-      background-color: #0f0f0fcc;
+      background-color: #0f0f0f;
       border: 2px solid #1e1e1e;
       padding: 15px;
       margin-bottom: 20px;
       border-radius: 5px;
-      transition: all 0.3s ease;
-
       overflow: hidden;
+      transition: all 0.3s ease;
     }
 
     .section::before {
       content: "";
       position: absolute;
-      inset: -3px;
-      z-index: -1;
-      border-radius: 8px;
+      inset: 0;
+      padding: 3px;
+      border-radius: 5px;
 
       background: linear-gradient(
         90deg,
-        #ff00e1aa,
-        #ffffff88
+        #ff00e1,
+        #ffffff
       );
 
       opacity: 0;
-      filter: blur(18px);
       transition: opacity 0.3s ease;
-    }
 
-    .section:hover {
-      background: linear-gradient(
-        90deg,
-        #ff00e126,
-        #ffffff1a
-      );
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
 
-      backdrop-filter: blur(18px) saturate(160%);
-      -webkit-backdrop-filter: blur(18px) saturate(160%);
+      pointer-events: none;
 
-      border-color: #ffffff66;
+      mask:
+        linear-gradient(#ffffff 0 0) content-box,
+        linear-gradient(#ffffff 0 0);
+      mask-composite: exclude;
 
-      box-shadow:
-        0 0 20px #ff00e166,
-        0 0 35px #ffffff33;
-
-      transform: translateY(-2px);
+      -webkit-mask:
+        linear-gradient(#ffffff 0 0) content-box,
+        linear-gradient(#ffffff 0 0);
+      -webkit-mask-composite: xor;
     }
 
     .section:hover::before {
       opacity: 1;
+    }
+
+    .section:hover {
+      border-color: #ffffff66;
+
+      box-shadow:
+        0 0 15px #ff00e166,
+        0 0 30px #ffffff33;
     }
   </style>
 </head>
