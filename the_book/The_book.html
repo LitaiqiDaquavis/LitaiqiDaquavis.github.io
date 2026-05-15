@@ -1,12 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>LDMC The_book</title>
-    <style>
-        body { font-family: sans-serif; background-color: #1e1e1e; color: #f0f0f0; max-width: 800px; margin: 20px auto; padding: 20px; }
-        a { color: #4CAF50; }
-        .section { background-color: #2d2d2d; padding: 15px; margin-bottom: 20px; border-radius: 5px; }
-    </style>
+  <title>Litaiqi_Daquaviss Minecraft Server</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #0f0f0f;
+      color: #f0f0f0;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    a {
+      color: #4CAF50;
+    }
+
+    .section {
+      position: relative;
+      background-color: #0f0f0f;
+      border: 2px solid #1e1e1e;
+      padding: 15px;
+      margin-bottom: 5px;
+      border-radius: 5px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      padding: 3px;
+      border-radius: 5px;
+
+      background: #1e1e1e;
+
+      opacity: 0;
+      transition: opacity 0.3s ease;
+
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+
+      pointer-events: none;
+
+      mask:
+        linear-gradient(#ffffff 0 0) content-box,
+        linear-gradient(#ffffff 0 0);
+      mask-composite: exclude;
+
+      -webkit-mask:
+        linear-gradient(#ffffff 0 0) content-box,
+        linear-gradient(#ffffff 0 0);
+      -webkit-mask-composite: xor;
+    }
+
+    .section:hover::before {
+      opacity: 1;
+    }
+
+    .section:hover {
+      border-color: #1e1e1eff;
+
+      box-shadow:
+        0 0 10px #8a6f3dff,
+        0 0 10px #d6c28aff;
+    }
+  </style>
 </head>
 <body>
     <h1>📕 The_book</h1>
