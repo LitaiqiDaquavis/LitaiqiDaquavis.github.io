@@ -69,6 +69,40 @@
   </style>
 </head>
 <body>
+	<h1>📒 如何获取正版账号</h1>
+	<p>这个服务器需要正版账号才能加入，否则就会被"在线监测"这一关拦在门外</p>
+
+	<div class="section">
+		<h2>❓ 为什么会被拦在门外</h2>
+		<ul>
+			<li>这就要说到运行原理了。创建服务器时，你会发现有个叫<code>server.properties</code>的文件，如果用记事本打开就能发现这个里面有一条叫<code>online-mode</code>，如果冒号后面跟着的是<code>true</code>那么在玩家加入时，服务器就会向Mojang获取该玩家是否能在Mojang的账号列表中查询到。</li>
+			<li>如果查询不到，服务器核心就会默认为"该玩家登陆时用到是离线或盗版的MC，然后就会拒绝该玩家加入</li>
+			<li>当然，如果那一条的冒号后面是<code>false</code>那么服务器就不会向Mojang查询。所以就算是离线或盗版MC也能加入，这也增加了被攻击的危险</li>
+		</ul>
+	</div>
+
+	<div class="section">
+		<h2>🤏 如何获取到</h2>
+		<ol>
+			<li>访问<a href="https://minecraft.net/zh-hans" target="_blank">Mojang官网上下载官方启动器的地方</a></li>
+			<li>下载它，勾选了协议后即可安装。这段时间会非常漫长，你可以选择最小化窗口然后做点什么事</li>
+			<li>安装完成后，重新打开启动器，用Xbox注册一个账号然后用这个账号登录</li>
+			<li>完成！</li>
+		</ol>
+		<p>🔔 提示：官方启动器启动需要很多时间，建议下载一个HMCL（Hello Minecraft Launcher）启动器</p>
+	</div>
+
+	<div class="section">
+		<h2>🔍 如何查看自己有没有创建成功</h2>
+		<ol>
+			<li>访问<a href="https://mcuuid.net" target="_blank">Mojang官方的查看UUID的网站</a></li>
+			<li>然后有两种方法查询。方法一：打开官方启动器，选择Java Edition，把在"启动游戏"右边的那一行字复制下来。方法二：随便创建一个世界，然后在"更多"菜单中选择"打开世界文件夹"，在<code>data</code>文件夹中找到自己的UUID，全部复制下来</li>
+			<li>在网站的搜索框中把刚刚的内容粘贴进去，然后点击搜索来查找</li>
+			<li>如果成功了，就会显示你的皮肤（屏幕太小会显示头像）、玩家名和UUID</li>
+		</ol>
+	</div>
+
+
     <hr>
     <footer>
 		<p>最后更新：2026.5.16 | 网站制作者：<em>Litaiqi_Daquavis</em></p>
