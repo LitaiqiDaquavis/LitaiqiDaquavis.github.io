@@ -1,30 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>LDMC The_book</title>
+  <title>Litaiqi_Daquaviss MC Server</title>
   <style>
     body {
-      font-family: sans-serif;
-      background-color: #0f0f0f;
+      font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(255, 209, 102, 0.18), transparent 35%),
+        linear-gradient(135deg, #07110b, #111111 60%, #070707);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      min-height: 100vh;
       color: #f0f0f0;
-      max-width: 800px;
-      margin: 20px auto;
+      max-width: 900px;
+      margin: 30px auto;
       padding: 20px;
+      line-height: 1.6;
     }
 
     a {
-      color: #4CAF50;
+      color: #ffd166;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #ffd166;
+        text-decoration: underline;
+    }
+
+    code {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 9px;
+      background: rgba(255, 209, 102, 0.12);
+      border: 1px solid rgba(255, 209, 102, 0.32);
+      color: #ffd166;
+      font-family: "Cascadia Code", Consolas, monospace;
+      letter-spacing: 0.02em;
+    }
+
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.1;
+      margin-bottom: 12px;
+      color: #ffffff;
+      text-shadow: 0 0 18px rgba(255, 209, 102, 0.8);
+      animation: breathe 4s ease-in-out infinite;
+    }
+
+    @keyframes breathe {
+      0%, 100% {
+        text-shadow: 0 0 18px rgba(255, 209, 102, 0.45);
+        transform: scale(1);
+      }
+
+      50% {
+        text-shadow: 0 0 28px rgba(255, 209, 102, 0.75);
+        transform: scale(1.015);
+      }
+    }
+
+    h2 {
+      color: #fff3cf;
+    }
+
+    p {
+      color: #d8d8d8;
     }
 
     .section {
       position: relative;
-      background-color: #0f0f0f;
-      border: 2px solid #1e1e1e;
-      padding: 15px;
-      margin-bottom: 5px;
-      border-radius: 5px;
+      background-color: rgba(15, 15, 15, 0.5);
+      border: 1px solid rgba(30, 30, 30, 0.8);
+      color: #f0f0f0;
+      padding: 22px;
+      margin-bottom: 18px;
+      border-radius: 16px;
       overflow: hidden;
-      transition: all 0.3s ease;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     }
 
     .section::before {
@@ -60,12 +115,28 @@
     }
 
     .section:hover {
-      border-color: #1e1e1eff;
-
+      transform: translateY(-4px);
+      border-color: rgba(173, 175, 76, 0.55);
       box-shadow:
-        0 0 10px #8a6f3dff,
-        0 0 10px #d6c28aff;
+        0 14px 35px rgba(0, 0, 0, 0.35),
+        0 0 22px rgba(197, 182, 47, 0.226);
     }
+
+    footer {
+      margin-top: 28px;
+      padding: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      color: #b8b8b8;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    footer em {
+      color: #ffd166;
+      font-style: normal;
+      font-weight: 700;
+    }
+
   </style>
 </head>
 <body>
@@ -96,15 +167,12 @@
 		<h2>🔍 如何查看自己有没有创建成功</h2>
 		<ol>
 			<li>访问<a href="https://mcuuid.net" target="_blank">Mojang官方的查看UUID的网站</a></li>
-			<li>然后有两种方法查询。方法一：打开官方启动器，选择Java Edition，把在"启动游戏"右边的那一行字复制下来。方法二：随便创建一个世界，然后在"更多"菜单中选择"打开世界文件夹"，在<code>data</code>文件夹中找到自己的UUID，全部复制下来</li>
+			<li>打开官方启动器，选择Java Edition，把在"启动游戏"右边的那一行字复制下来。</li>
 			<li>在网站的搜索框中把刚刚的内容粘贴进去，然后点击搜索来查找</li>
 			<li>如果成功了，就会显示你的皮肤（屏幕太小会显示头像）、玩家名和UUID</li>
 		</ol>
 	</div>
-
-
-    <hr>
-    <footer>
+<footer>
 		<p>最后更新：2026.5.16 | 网站制作者：<em>Litaiqi_Daquavis</em></p>
     </footer>
 </body>
