@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LDMC The_book</title>
+  <style>
+    body {
+      font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(255, 209, 102, 0.18), transparent 35%),
+        linear-gradient(135deg, #07110b, #111111 60%, #070707);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      min-height: 100vh;
+      color: #f0f0f0;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #ffd166;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #ffd166;
+        text-decoration: underline;
+    }
+
+    code {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 9px;
+      background: rgba(255, 209, 102, 0.12);
+      border: 1px solid rgba(255, 209, 102, 0.32);
+      color: #ffd166;
+      font-family: "Cascadia Code", Consolas, monospace;
+      letter-spacing: 0.02em;
+    }
+
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.1;
+      margin-bottom: 12px;
+      color: #ffffff;
+      text-shadow: 0 0 18px rgba(255, 209, 102, 0.8);
+      animation: breathe 4s ease-in-out infinite;
+    }
+
+    @keyframes breathe {
+      0%, 100% {
+        text-shadow: 0 0 18px rgba(255, 209, 102, 0.45);
+        transform: scale(1);
+      }
+
+      50% {
+        text-shadow: 0 0 28px rgba(255, 209, 102, 0.75);
+        transform: scale(1.015);
+      }
+    }
+
+    h2 {
+      color: #fff3cf;
+    }
+
+    p {
+      color: #d8d8d8;
+    }
+
+    .section {
+      position: relative;
+      background-color: rgba(15, 15, 15, 0.5);
+      border: 1px solid rgba(30, 30, 30, 0.8);
+      color: #f0f0f0;
+      padding: 22px;
+      margin-bottom: 18px;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      padding: 3px;
+      border-radius: 5px;
+
+      background: #1e1e1e;
+
+      opacity: 0;
+      transition: opacity 0.3s ease;
+
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+
+      pointer-events: none;
+
+      mask:
+        linear-gradient(#ffffff 0 0) content-box,
+        linear-gradient(#ffffff 0 0);
+      mask-composite: exclude;
+
+      -webkit-mask:
+        linear-gradient(#ffffff 0 0) content-box,
+        linear-gradient(#ffffff 0 0);
+      -webkit-mask-composite: xor;
+    }
+
+    .section:hover::before {
+      opacity: 1;
+    }
+
+    .section:hover {
+      transform: translateY(-4px);
+      border-color: rgba(173, 175, 76, 0.55);
+      box-shadow:
+        0 14px 35px rgba(0, 0, 0, 0.35),
+        0 0 22px rgba(197, 182, 47, 0.226);
+    }
+
+    footer {
+      margin-top: 28px;
+      padding: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      color: #b8b8b8;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    footer em {
+      color: #ffd166;
+      font-style: normal;
+      font-weight: 700;
+    }
+
+  </style>
+<link rel="icon" type="image/png" href="https://litaiqidaquavis.github.io/the_book/images/favicon.png">
+</head>
+<body>
+	<h1>📒 如何获取正版账号</h1>
+	<p>这个服务器需要正版账号才能加入，否则就会被"在线监测"这一关拦在门外</p>
+
+	<div class="section">
+		<h2>❓ 为什么会被拦在门外</h2>
+		<ul>
+			<li>这就要说到运行原理了。创建服务器时，你会发现有个叫<code>server.properties</code>的文件，如果用记事本打开就能发现这个里面有一条叫<code>online-mode</code>，如果冒号后面跟着的是<code>true</code>那么在玩家加入时，服务器就会向Mojang获取该玩家是否能在Mojang的账号列表中查询到。</li>
+			<li>如果查询不到，服务器核心就会默认为"该玩家登陆时用到是离线或盗版的MC，然后就会拒绝该玩家加入</li>
+			<li>当然，如果那一条的冒号后面是<code>false</code>那么服务器就不会向Mojang查询。所以就算是离线或盗版MC也能加入，这也增加了被攻击的危险</li>
+		</ul>
+	</div>
+
+	<div class="section">
+		<h2>🤏 如何获取到</h2>
+		<ol>
+			<li>访问<a href="https://minecraft.net/zh-hans/download" target="_blank">Mojang官网上下载官方启动器的地方</a></li>
+			<li>下载它，勾选了协议后即可安装。这段时间会非常漫长，你可以选择最小化窗口然后做点什么事</li>
+			<li>安装完成后，重新打开启动器，用Xbox注册一个账号然后用这个账号登录</li>
+			<li>完成！</li>
+		</ol>
+		<p>🔔 提示：官方启动器启动需要很多时间，建议下载一个HMCL（Hello Minecraft Launcher）启动器</p>
+	</div>
+
+	<div class="section">
+		<h2>🔍 如何查看自己有没有创建成功</h2>
+		<ol>
+			<li>访问<a href="https://mcuuid.net" target="_blank">Mojang官方的查看UUID的网站</a></li>
+			<li>打开官方启动器，选择Java Edition，把在"启动游戏"右边的那一行字复制下来。</li>
+			<li>在网站的搜索框中把刚刚的内容粘贴进去，然后点击搜索来查找</li>
+			<li>如果成功了，就会显示你的皮肤（屏幕太小会显示头像）、玩家名和UUID</li>
+		</ol>
+	</div>
+<footer>
+		<p>最后更新：2026.5.16 | 网站制作者：<em>Litaiqi_Daquavis</em></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LDMC The_book</title>
+  <style>
+    body {
+      font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(255, 209, 102, 0.18), transparent 35%),
+        linear-gradient(135deg, #07110b, #111111 60%, #070707);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      min-height: 100vh;
+      color: #f0f0f0;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #ffd166;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #ffd166;
+        text-decoration: underline;
+    }
+
+    code {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 9px;
+      background: rgba(255, 209, 102, 0.12);
+      border: 1px solid rgba(255, 209, 102, 0.32);
+      color: #ffd166;
+      font-family: "Cascadia Code", Consolas, monospace;
+      letter-spacing: 0.02em;
+    }
+
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.1;
+      margin-bottom: 12px;
+      color: #ffffff;
+      text-shadow: 0 0 18px rgba(255, 209, 102, 0.8);
+      animation: breathe 4s ease-in-out infinite;
+    }
+
+    @keyframes breathe {
+      0%, 100% {
+        text-shadow: 0 0 18px rgba(255, 209, 102, 0.45);
+        transform: scale(1);
+      }
+
+      50% {
+        text-shadow: 0 0 28px rgba(255, 209, 102, 0.75);
+        transform: scale(1.015);
+      }
+    }
+
+    h2 {
+      color: #fff3cf;
+    }
+
+    p {
+      color: #d8d8d8;
+    }
+
+    .section {
+      position: relative;
+      background-color: rgba(15, 15, 15, 0.5);
+      border: 1px solid rgba(30, 30, 30, 0.8);
+      color: #f0f0f0;
+      padding: 22px;
+      margin-bottom: 18px;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      padding: 3px;
+      border-radius: 5px;
+
+      background: #1e1e1e;
+
+      opacity: 0;
+      transition: opacity 0.3s ease;
+
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+
+      pointer-events: none;
+
+      mask:
+        linear-gradient(#ffffff 0 0) content-box,
+        linear-gradient(#ffffff 0 0);
+      mask-composite: exclude;
+
+      -webkit-mask:
+        linear-gradient(#ffffff 0 0) content-box,
+        linear-gradient(#ffffff 0 0);
+      -webkit-mask-composite: xor;
+    }
+
+    .section:hover::before {
+      opacity: 1;
+    }
+
+    .section:hover {
+      transform: translateY(-4px);
+      border-color: rgba(173, 175, 76, 0.55);
+      box-shadow:
+        0 14px 35px rgba(0, 0, 0, 0.35),
+        0 0 22px rgba(197, 182, 47, 0.226);
+    }
+
+    footer {
+      margin-top: 28px;
+      padding: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      color: #b8b8b8;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    footer em {
+      color: #ffd166;
+      font-style: normal;
+      font-weight: 700;
+    }
+
+  </style>
+<link rel="icon" type="image/png" href="https://litaiqidaquavis.github.io/the_book/images/favicon.png">
+</head>
+<body>
+	<h1>😕 FaQ</h1>
+	<p>Ok哈，恭喜你找到了首页里说的"FaQ"。看看这里能解答你的一些疑惑不？</p>
+	
+	<div class="section">
+		<h2>🕹️ 如何玩MC</h2>
+		<p>尽管网上有很多教程，但在这里是一份针对在Litaiqi_Daquaviss服务器的</p>
+		<p><a href="https://LitaiqiDaquavis.github.io/the_book/FaQ/how_to_play.html" target="_blank">点我阅读</a></p>
+	</div>
+
+	<div class="section">
+		<h2>🐌 加载慢</h2>
+		<p>进度条是属蜗牛的嘛？不对，它是一只不愿意继续跑的猎豹。让它重新充满活力吧</p>
+		<p><a href="https://LitaiqiDaquavis.github.io/the_book/FaQ/so_slow.html" target="_blank">点我阅读</a></p>
+	</div>
+
+	<div class="section">
+		<h2>🔒 移动不了</h2>
+		<p>这是玩MC时的一个比较经典的问题，每个人都可能会遇到。来看看如何解决吧。</p>
+		<p><a href="https://LitaiqiDaquavis.github.io/the_book/FaQ/about_can't_move.html" target="_blank">点我阅读</a></p>
+	</div>
+
+	<div class="section">
+		<h2>📒 如何获取正版账号</h2>
+		<p>这个服务器是需要正版账号才能加入的，如果是离线模式或者是盗版的MC就不行。因此Litaiqi_Daquavis就在这里制作了一个获取正版账号方法</p>
+		<p><a href="https://LitaiqiDaquavis.github.io/the_book/FaQ/how_to_get_a_account.html" target="_blank">点我阅读</a></p>
+	</div>
+
+	<div class="section">
+		<h2>🎮 如何加入这个服务器</h2>
+		<p>这个在首页已经说过一遍了，不过这里的更详细</p>
+		<p><a href="https://LitaiqiDaquavis.github.io/the_book/FaQ/how_to_join_the_server.html" target="_blank">点我阅读</a></p>
+	</div>
+
+	<div class="section">
+		<h2>👕 如何制作属于自己的皮肤</h2>
+		<p>皮肤，自定义一下才有个性嘛。那如何自定义呢？看看这里的吧</p>
+		<p><a href="https://LitaiqiDaquavis.github.io/the_book/FaQ/how_to_make_your_skin.html" target="_blank">点我阅读</a></p>
+	</div>
+<footer>
+		<p>最后更新：2026.5.16 | 网站制作者：<em>Litaiqi_Daquavis</em></p>
+    </footer>
+</body>
+</html>

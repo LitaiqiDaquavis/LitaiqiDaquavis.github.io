@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LDMC The_book</title>
+  <style>
+    body {
+      font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(255, 209, 102, 0.18), transparent 35%),
+        linear-gradient(135deg, #07110b, #111111 60%, #070707);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      min-height: 100vh;
+      color: #f0f0f0;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #ffd166;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #ffd166;
+        text-decoration: underline;
+    }
+
+    code {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 9px;
+      background: rgba(255, 209, 102, 0.12);
+      border: 1px solid rgba(255, 209, 102, 0.32);
+      color: #ffd166;
+      font-family: "Cascadia Code", Consolas, monospace;
+      letter-spacing: 0.02em;
+    }
+
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.1;
+      margin-bottom: 12px;
+      color: #ffffff;
+      text-shadow: 0 0 18px rgba(255, 209, 102, 0.8);
+      animation: breathe 4s ease-in-out infinite;
+    }
+
+    @keyframes breathe {
+      0%, 100% {
+        text-shadow: 0 0 18px rgba(255, 209, 102, 0.45);
+        transform: scale(1);
+      }
+
+      50% {
+        text-shadow: 0 0 28px rgba(255, 209, 102, 0.75);
+        transform: scale(1.015);
+      }
+    }
+
+    h2 {
+      color: #fff3cf;
+    }
+
+    p {
+      color: #d8d8d8;
+    }
+
+    .section {
+      position: relative;
+      background-color: rgba(15, 15, 15, 0.5);
+      border: 1px solid rgba(30, 30, 30, 0.8);
+      color: #f0f0f0;
+      padding: 22px;
+      margin-bottom: 18px;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      padding: 3px;
+      border-radius: 5px;
+
+      background: #1e1e1e;
+
+      opacity: 0;
+      transition: opacity 0.3s ease;
+
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+
+      pointer-events: none;
+
+      mask:
+        linear-gradient(#ffffff 0 0) content-box,
+        linear-gradient(#ffffff 0 0);
+      mask-composite: exclude;
+
+      -webkit-mask:
+        linear-gradient(#ffffff 0 0) content-box,
+        linear-gradient(#ffffff 0 0);
+      -webkit-mask-composite: xor;
+    }
+
+    .section:hover::before {
+      opacity: 1;
+    }
+
+    .section:hover {
+      transform: translateY(-4px);
+      border-color: rgba(173, 175, 76, 0.55);
+      box-shadow:
+        0 14px 35px rgba(0, 0, 0, 0.35),
+        0 0 22px rgba(197, 182, 47, 0.226);
+    }
+
+    footer {
+      margin-top: 28px;
+      padding: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      color: #b8b8b8;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    footer em {
+      color: #ffd166;
+      font-style: normal;
+      font-weight: 700;
+    }
+
+  </style>
+<link rel="icon" type="image/png" href="https://litaiqidaquavis.github.io/the_book/images/favicon.png">
+</head>
+<body>
+    <h1>📋 规则</h1>
+    <p>规则，服务器的规则！注意，这个服务器的的地址不是2b2t.org！这是个有规则的服务器！现在就让我们看看这个服务器的规则吧。</p>
+
+    <div class="section">
+        <h2>正文内容</h2>
+        <p>注意啦，这里是规则一栏，可别违反了</p>
+        <ul>
+			<li>不要玩岩浆<image src="images/lava_bucket.png" width="16" height="16"></li>
+			<li>不要玩TNT<image src="images/tnt_side.png" width="16" height="16"></image>（包括TNT矿车<image src="images/tnt_minecart.png" width="16" height="16">）</li>
+			<li>不要玩🔥（不是那个叫FlameFrags的玩家）</li>
+			<li>不要偷东西，包括撸掉别人的树的叶子获取<image src="images/apple.png" width="16" height="16">这种事</li>
+			<li>不要恶意伤人（平常打招呼不算）</li>
+			<li>别让任何人因为你在服务器里干的事儿而被讨厌（嫉妒不算）</li>
+			<li>个人的所有东西不符合除了和玩家交易或玩家之间赠送，其他全部都是自己挖矿、冒险、种地、战斗等方式获得。</li>
+			<li>不许拥有违禁物品</li>
+			<li>不要建造大型红石机器<image src="images/redstone.png" width="16" height="16">或放置大量漏斗<image src="images/hopper.png" width="16" height="16">（包括漏斗矿车<image src="images/hopper_minecart.png" width="16" height="16">）</li>
+			<li>不要在别人家里填满水<image src="images/water_bucket.png" width="16" height="16">、种海带<image src="images/kelp.png" width="16" height="16">、放岩浆<image src="images/lava_bucket.png" width="16" height="16">、给本来就是生锈的铜质品除锈<image src="images/oxidized_copper.png" width="16" height="16">、刮去树皮<image src="images/oak_log.png" width="16" height="16">、堵复活点、制造噪音<image src="images/note_block.png" width="16" height="16">、破坏建筑、偷东西、在气泡柱电梯上做手脚<image src="images/bubbles.png" width="16" height="16">、毁坏在家里的红石电路<image src="images/redstone.png" width="16" height="16"></image></li>
+			<li>人工矿道的宽度不可以是7格，如果是8格或6格就没事</li>
+			<li>建筑物高度不得为49或110格</li>
+			<li>不能制造大量实体或粒子效果或短时间内推动大量活塞<image src="images/piston.png" width="16" height="16">，激活大量音符盒<image src="images/note_block.png" width="16" height="16"></li>
+		</ul>	
+	</div>
+
+	<div class="section">
+		<h2>违禁物品</h2>
+		<p>这些也要好好阅读，趁着还没获得或还没被发现，赶紧销毁它们或避免获得</p>
+		<ul>
+			<li>管理员用品。包括命令方块<image src="images/command_blocks.png" width="16" height="16">光源<image src="images/light_15.png" width="16" height="16">屏障<image src="images/barrier.png" width="16" height="16">结构空位<image src="images/structure_void.png" width="16" height="16">结构方块系列<image src="images/structure_blocks.png" height="16">调试棒<image src="images/debug_stick.png" height="16">测试方块系列<image src="images/test_blocks.png" height="16">拒绝和允许方块<image src="images/allow_and_deny_block.png" height="16" ></li>
+			<li>所有人工制造的绿色方块或可染色的动物。包括绿色或淡绿色的地毯、床、羊毛、玻璃、玻璃板、混凝土、混凝土粉末、陶瓦、潜影盒。绿色羊或佩戴绿色项圈的或绿色狼铠的狗。绿宝石块。在这里不包括树叶、氧化铜制品</li>
+			<li>基岩（不是Minecraft Bedrock Edition）、末地传送门框架、末地传送门方块、下界传送门方块等生存无法获得的物品</li>
+			<li>生物头颅（末影龙头颅和玩家头颅不算）</li>
+			<li>蛙明灯<image src="images/froglights.png" height="16"></image>、幻翼膜<image src="images/phantom_membrane.png" height="16"></image>、海绵<image src="images/sponge.png" height="16"></image>、恶魂之泪<image src="images/ghast_tear.png" height="16">、下界之星<image src="images/nether_star.png" height="16">等需要敌对生物才能获取的物品</li>
+		</ul>
+	</div>
+<footer>
+        <p>服务器维护者：<em>Litaiqi_Daquavis</em> | 最后更新：2026.5.16 | 网站制作者：<em>Litaiqi_Daquavis</em></p>
+    </footer>
+</body>
+</html>
