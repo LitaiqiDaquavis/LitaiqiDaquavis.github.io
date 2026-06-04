@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="https://litaiqidaquavis.github.io/images/favicon.png">
+  <title>Litaiqi_Daquavis's Website</title>
+  <style>
+    body {
+      font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(255, 209, 102, 0.5), transparent 35%),
+        linear-gradient(135deg, #0f0f0f, #111111 60%, #070707);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      min-height: 100vh;
+      color: #f0f0f0;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #ffd166;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #ffd166;
+        text-decoration: underline;
+    }
+
+    code {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 9px;
+      background: rgba(255, 209, 102, 0.12);
+      border: 1px solid rgba(255, 209, 102, 0.32);
+      color: #ffd166;
+      font-family: "Cascadia Code", Consolas, monospace;
+      letter-spacing: 0.02em;
+    }
+
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.1;
+      margin-bottom: 12px;
+      color: #ffffff;
+      text-shadow: 0 0 18px rgba(255, 209, 102, 0.8);
+      animation: breathe 4s ease-in-out infinite;
+    }
+
+    @keyframes breathe {
+      0%, 100% {
+        text-shadow: 0 0 18px rgba(255, 209, 102, 0.45);
+        transform: scale(1);
+      }
+
+      50% {
+        text-shadow: 0 0 28px rgba(255, 209, 102, 0.75);
+        transform: scale(1.015);
+      }
+    }
+
+    h2 {
+      color: #fff3cf;
+    }
+
+    .hero {
+      margin-bottom: 26px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      font-size: 1.08rem;
+    }
+
+    .portal-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .section {
+      min-height: 230px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .section h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 0;
+    }
+
+    .section .tagline {
+      color: #ffd166;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .section ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .button-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 209, 102, 0.14);
+      border: 1px solid rgba(255, 209, 102, 0.38);
+      box-shadow: 0 0 18px rgba(255, 209, 102, 0.12);
+      transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .button-link:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 209, 102, 0.22);
+      box-shadow: 0 0 24px rgba(255, 209, 102, 0.2);
+      text-decoration: none;
+    }
+
+    .quick-note {
+      margin-top: 22px;
+      padding: 14px 18px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #cfcfcf;
+    }
+
+    p {
+      color: #d8d8d8;
+    }
+
+    .section {
+      position: relative;
+      background-color: rgba(15, 15, 15, 0.5);
+      border: 1px solid rgba(30, 30, 30, 0.8);
+      color: #f0f0f0;
+      padding: 22px;
+      margin-bottom: 18px;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      padding: 3px;
+      border-radius: 5px;
+
+      background: #1e1e1e;
+
+      opacity: 0;
+      transition: opacity 0.3s ease;
+
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+
+      pointer-events: none;
+
+      mask:
+        linear-gradient(#ffffff 0 0) content-box,
+        linear-gradient(#ffffff 0 0);
+      mask-composite: exclude;
+
+      -webkit-mask:
+        linear-gradient(#ffffff 0 0) content-box,
+        linear-gradient(#ffffff 0 0);
+      -webkit-mask-composite: xor;
+    }
+
+    .section:hover::before {
+      opacity: 1;
+    }
+
+    .section:hover {
+      transform: translateY(-4px);
+      border-color: rgba(173, 175, 76, 0.55);
+      box-shadow:
+        0 14px 35px rgba(0, 0, 0, 0.35),
+        0 0 22px rgba(197, 182, 47, 0.226);
+    }
+
+    footer {
+      margin-top: 28px;
+      padding: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      color: #b8b8b8;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    footer em {
+      color: #ffd166;
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    @media (max-width: 720px) {
+      .portal-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        min-height: auto;
+      }
+    }
+
+  </style>
+</head>
+<body>
+    <header class="hero">
+      <h1><img src="https://litaiqidaquavis.github.io/images/observer_front.png" width="48" alt=""> Litaiqi_Daquavis' Website</h1>
+      <p>Welcome to Litaiqi_Daquavis' website homepage. This is the project entry hall.</p>
+    </header>
+
+    <main class="portal-grid">
+      <section class="section">
+        <div>
+          <h2><img src="https://litaiqidaquavis.github.io/images/observer_front.png" width="35" alt=""> MC Server Wiki &amp; FaQ</h2>
+          <p class="tagline">Litaiqi_Daquavis Minecraft Server!</p>
+          <p>Check out server announcements, changelogs, how to join, the activity area, and The Book. This is the community for Litaiqi_Daquavis Minecraft Server.</p>
+          <ul>
+            <li>Play Minecraft together</li>
+            <li>Add activities</li>
+            <li>Read <book>The_book</book></li>
+          </ul>
+        </div>
+        <div class="action-row">
+          <a class="button-link" href="https://litaiqidaquavis.github.io/homepage.html" target="_blank" rel="noopener noreferrer">Enter MC Server Homepage</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <div>
+          <h2>🔐 "jiami" encrypted website</h2>
+          <p class="tagline">Text Encryption and Decryption Tool</p>
+          <p>"jiami" is an encrypted website that provides a shortcut to the latest version. It's suitable for quickly accessing the encryption/decryption pages.</p>
+          <ul>
+            <li>Current Latest Version: <code>jiami13.html</code></li>
+            <li>Unified entry from the homepage to avoid missing version links</li>
+          </ul>
+        </div>
+        <div class="action-row">
+          <a class="button-link" href="https://litaiqidaquavis.github.io/jiami/jiami13.html" target="_blank" rel="noopener noreferrer">Enter "jiami"</a>
+        </div>
+      </section>
+    </main>
+
+    <div class="quick-note">
+      <strong>Tip:</strong> If you encounter a 404 error when directly accessing <code>https://litaiqidaquavis.github.io/index.html</code>, Litaiqi_Daquavis is working on the website's homepage.
+    </div>
+
+    <footer>
+      <p>Created by：<em>Litaiqi_Daquavis</em> | Last Updated: 2026.6.3 | Website Creator：<em>Litaiqi_Daquavis with GPT5.5</em></p>
+    </footer>
+</body>
+</html>
